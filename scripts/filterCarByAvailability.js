@@ -4,14 +4,19 @@ function filterCarByAvailability(cars) {
 
   // Tempat penampungan hasil
   const result = [];
-  cars.map((car) => {
-    if (car.available !== false) {
-      result.push(car)
-    }
-  })
   // console.log(result);
 
   // Tulis code-mu disini
+  function filterCarByAvailability(car, availability) {
+    for (let i = 0; i < car.length; i++) {
+        if (car[i].available === availability) {
+            result.push(car[i]);
+        }
+    }
+    return;
+  }
+
+  filterCarByAvailability(cars, true)
 
   // Rubah code ini dengan array hasil filter berdasarkan availablity
   return result;
